@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f0f0; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+        }
+
+        /* Contact Me Section */
+        .contact-me {
+            width: 100%;
+            max-width: 800px; /* Set a maximum width for better alignment */
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e6e6e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center; /* Center-align text for better presentation */
+            margin: 20px; /* Add some margin to prevent content from touching edges */
+        }
+
+        .contact-me h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #4a5d23; /* Olive green */
+            margin-top: 0;
+            border-bottom: 2px solid #4a5d23; /* Olive green underline */
+            padding-bottom: 10px;
+        }
+
+        .contact-me p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Form Styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Space between form elements */
+            align-items: center; /* Center-align form elements */
+        }
+
+        .contact-form label {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+            color: #333;
+            text-align: left;
+            width: 100%; /* Full width for labels */
+            max-width: 400px; /* Set a maximum width for labels */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            max-width: 400px; /* Set a maximum width for inputs and textareas */
+            padding: 10px;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            resize: vertical; /* Allow vertical resizing only */
+        }
+
+        .submit-button {
+            background-color: #4a5d23; /* Olive green */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-button:hover {
+            background-color: #333; /* Darker green */
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Contact Me Section -->
+    <div id="contact-me" class="contact-me">
+        <h2>Contact Me</h2>
+        <p>Hello I'm Musa Jalloh. Interested in connecting or learning more about my work? Feel free to reach out using the form below!</p>
+        
+        <!-- Contact Form -->
+        <form action="submit_form.php" method="post" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
